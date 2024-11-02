@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Foodie Fanatix</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link href="fontawesome/css/all.css" rel="stylesheet">
+    </head>
+
+    <body onload="init()">
+        <div class="d-flex flex-column align-items-center p-3 bg-white border-bottom box-shadow fixed-top">
+            <img src="img/logo.png" class="img-thumbnail rounded-circle" width="100" height="40"/>
+            <nav>
+                <a class="p-2 text-dark" id="getLatest" href="#">Latest</a>
+                <a class="p-2 text-dark active" id="getAll" href="#">All</a>
+                <a class="p-2 text-dark" id="getPopular" href="#">Popular</a>
+            </nav>
+        </div>
+
+        <div class="blog-header mx-auto text-center">
+            <h1>Discover the taste of life with me!</h1>
+            <p class="lead"><em>Eat around the world with me, let's get a feel for flavorful experiences</em></p>
+            <p class="lead"><strong><em>My Favourite Spots</em></strong></p>
+        </div>
+
+        <div class="container visits">
+            <img src="img/nigeria.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/belgium.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/england.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/london.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/france.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/capetown.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/korea.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/japan.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/russia.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/gqeberha.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/jamaica.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/la.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/swaziland.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/nigeria.jpg" class="img-thumbnail rounded-circle" width="90"/>
+            <img src="img/tafiti.jpg" class="img-thumbnail rounded-circle" width="90"/>
+        </div>
+        <hr class="section-divider"/>
+
+        <div class="row container mx-auto">
+            <div class="column" id="posts">
+                Loading content...
+            </div>
+        </div>
+
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var rootPath;
+
+            function init(){
+                rootPath = "posts.json";
+
+                document.getElementById("getAll").addEventListener('click', getAllPosts);
+                document.getElementById("getLatest").addEventListener('click', getLatestPosts);
+                document.getElementById("getPopular").addEventListener('click', getPopularPosts);
+
+                getAllPosts();
+            }
+
+            function getAllPosts(){
+                let category = "all"; // Fetching all posts
+                fetchPosts(category);
+                setActiveLink("getAll");
+            }
+
+            function getPopularPosts(){
+                let category = "popular"; // Fetching popular posts
+                fetchPosts(category);
+                setActiveLink("getPopular");
+            }
+
+            function getLatestPosts(){
+                let category = "latest"; // Fetching latest posts
+                fetchPosts(category);
+                setActiveLink("getLatest");
+            }
+
+            function fetchPosts(category) {
+                fetch(rootPath) // Use rootPath here
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        displayPosts(data.posts[category]); // Fetch posts by category
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            }
+
+            function displayPosts(posts) {
+                var output = "";
+
+                // Check if posts exist for the category
+                if (posts.length === 0) {
+                    output = "<p>No posts available for this category.</p>";
+                } else {
+                    // Use let for block-scoped variable
+                    for (let a = 0; a < posts.length; a++) {
+                        output += `
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">${posts[a].title}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <img src="${posts[a].image}" class="card-img-top" alt="${posts[a].title}"/> <!-- Using title for alt text -->
+                                    <p class="card-text">${posts[a].description}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-lg btn-link"><i class="far fa-heart"></i></button>
+                                            <button type="button" class="btn btn-lg btn-link"><i class="far fa-comment"></i></button>
+                                            <button type="button" class="btn btn-lg btn-link"><i class="fa fa-retweet"></i></button>
+                                        </div>
+                                        <small class="text-muted">${posts[a].date}</small> <!-- Using date from JSON -->
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+                document.getElementById('posts').innerHTML = output;
+            }
+
+            function setActiveLink(id){
+                document.getElementById("getAll").classList.remove("active");
+                document.getElementById("getPopular").classList.remove("active");
+                document.getElementById("getLatest").classList.remove("active");
+
+                document.getElementById(id).classList.add("active");
+            }
+        </script>
+    </body>
+</html>

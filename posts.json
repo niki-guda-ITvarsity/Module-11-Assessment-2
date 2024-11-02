@@ -1,0 +1,142 @@
+{
+    "posts": {
+        "all": [
+            {
+                "title": "Home Town Platters",
+                "description": "Each experience is so fantastic it feels new, in my hometown of LA!",
+                "image": "img/claire-america.jpg",
+                "date": "2024-10-10"
+            },
+            {
+                "title": "Panda Ice-cream",
+                "description": "Unique deserts from the heart of Korea.",
+                "image": "img/japan.jpg",
+                "date": "2024-09-15"
+            },
+            {
+                "title": "Wine tasting with my sister",
+                "description": "Exploring the rich and diverse wine selections of Sandton, Johannesburg.",
+                "image": "img/clair-sister.jpg",
+                "date": "2024-11-01"
+            },
+            {
+                "title": "Belgian salad is a thing?",
+                "description": "Indulging in the new experiences in Belgium",
+                "image": "img/claire-belgium.jpg",
+                "date": "2024-09-20"
+            },
+            {
+                "title": "My favourite lobster and potato wedges",
+                "description": "Savoring classic dishes re-imagined french style",
+                "image": "img/claire-cafe-france.jpg",
+                "date": "2024-09-25"
+            },
+            {
+                "title": "London's Culinary Scene",
+                "description": "Experiencing the diverse food scene in London.",
+                "image": "img/claire-capetown.jpg",
+                "date": "2024-10-05"
+            },
+            {
+                "title": "Meet the chef",
+                "description": "How many people get to meet the chef behind their favourite dishes?",
+                "image": "img/claire-chef.jpg",
+                "date": "2024-09-28"
+            },
+            {
+                "title": "Exploring Tanzania with my children",
+                "description": "This is my kiddies' favourite spot",
+                "image": "img/claire-children.jpg",
+                "date": "2024-10-12"
+            },
+            {
+                "title": "Best bread in France",
+                "description": "Tasting the unique and delicious flavors of French cuisine.",
+                "image": "img/claire-england.jpg",
+                "date": "2024-10-15"
+            },
+            {
+                "title": "Italian Culinary Arts",
+                "description": "The feta cheese in this dish was the star player.",
+                "image": "img/claire-france.jpg",
+                "date": "2024-10-30"
+            },
+            {
+                "title": "Meet my husband",
+                "description": "The man behind the camera.",
+                "image": "img/claire-husband.jpg",
+                "date": "2024-11-05"
+            },
+            {
+                "title": "Beautiful Gqeberha",
+                "description": "Had these delicious loaded fries Gqeberha, South Africa.",
+                "image": "img/claire-korea.jpg",
+                "date": "2024-11-10"
+            },
+            {
+                "title": "Refreshing Flavors of Italy",
+                "description": "Indulging in the vibrant and spicy flavors of Italian cuisine.",
+                "image": "img/claire-pasta-italy.jpg",
+                "date": "2024-11-15"
+            },
+            {
+                "title": "Los Angeles Eats",
+                "description": "Tasting the diverse and exciting food options in Los Angeles.",
+                "image": "img/claire-russia.jpg",
+                "date": "2024-11-20"
+            },
+            {
+                "title": "Swaziland's Dupes",
+                "description": "Exploring my favourite Swaziland renditions of American food.",
+                "image": "img/la.jpg",
+                "date": "2024-11-25"
+            },
+            {
+                "title": "Dining near the Eiffel Tower",
+                "description": "A view of the Eiffel Tower makes food taste so much sweeter.",
+                "image": "img/russia.jpg",
+                "date": "2024-11-30"
+            }
+        ],
+        "popular": [
+            {
+                "title": "Refreshing Flavors of Italy",
+                "description": "Indulging in the vibrant and spicy flavors of Italian cuisine.",
+                "image": "img/claire-pasta-italy.jpg",
+                "date": "2024-11-15"
+            },
+            {
+                "title": "Dining near the Eiffel Tower",
+                "description": "A view of the Eiffel Tower makes food taste so much sweeter.",
+                "image": "img/russia.jpg",
+                "date": "2024-11-30"
+            },
+            {
+                "title": "Beautiful Gqeberha",
+                "description": "Had these delicious loaded fries Gqeberha, South Africa.",
+                "image": "img/claire-korea.jpg",
+                "date": "2024-11-10"
+            }
+        ],
+        "latest": [
+            {
+                "title": "Los Angeles Eats",
+                "description": "Tasting the diverse and exciting food options in Los Angeles.",
+                "image": "img/claire-russia.jpg",
+                "date": "2024-11-20"
+            },
+            {
+                "title": "Swaziland's Dupes",
+                "description": "Exploring my favourite Swaziland renditions of American food.",
+                "image": "img/la.jpg",
+                "date": "2024-11-25"
+            },
+            {
+                "title": "Dining near the Eiffel Tower",
+                "description": "A view of the Eiffel Tower makes food taste so much sweeter.",
+                "image": "img/russia.jpg",
+                "date": "2024-11-30"
+            }
+        ]
+    }
+}

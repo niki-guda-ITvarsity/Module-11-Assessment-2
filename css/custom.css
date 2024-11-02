@@ -1,0 +1,99 @@
+html{
+    font-size: 14px;
+}
+
+@media (min-width: 768px){
+    html {
+        font-size: 16px;
+    }
+}
+
+.blog-header{
+    margin-top: 11rem;
+    max-width: 700px;
+    
+}
+
+@media (max-width: 768px){
+    .blog-header{
+        margin-top: 13rem;
+    }
+}
+
+.contaianer{
+    max-width: 960px;
+}
+
+.visits{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+}
+
+.visits img {
+    width: 90px;
+    height: 90px;  
+    object-fit: cover; 
+}
+
+.container.visits {
+    overflow-x: hidden; 
+    display: flex;
+    margin: 0 10px 0 10;
+    justify-content: center;
+}
+
+
+.cars-deck .card{
+    min-width: 220px;
+}
+
+
+.card-text{
+    padding-top: 1rem;
+}
+
+.card-block{
+    min-height: 220px;
+}
+
+.active{
+    border-bottom: 1px solid black;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
